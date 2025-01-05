@@ -1,5 +1,3 @@
-Here is the Markdown version of your refined text:
-
 ```markdown
 # Skin Cancer Detector Web Application
 
