@@ -1,0 +1,13 @@
+tensorflow-cpu
+tensorflowjs
+Keras
+matplotlib
+pandas
+seaborn
+sklearn
+scipy
+pillow
+wandb
+six
+ipykernel
+wincertstore

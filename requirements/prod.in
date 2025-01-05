@@ -1,0 +1,6 @@
+numpy
+requests
+Pillow
+IPython
+imutils
+tf2onnx
