@@ -1,0 +1,102 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skin Cancer Type Detector</title>
+    <link rel="stylesheet" href="./css/w3.css" />
+    <link rel="stylesheet" href="./css/app.css" />
+    <!-- Add Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <script type="text/javascript" src="js/target_classes.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest"></script>
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-2.1.1.min.js"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.0/chart.min.js"></script>
+    <script type="text/javascript" src="js/mobile-net.js"></script>
+  </head>
+  <body>
+    <!-- Top Bar -->
+    <div class="w3-center w3-margin-top">
+      <p class="space-letters">
+      </p>
+    </div>
+
+    <div class="container">
+      <div class="mobilenet-demo-container">
+        <h1>Skin Cancer Type Detector</h1>
+        <div class="demo-wrapper">
+          <div>
+            <button id="load-button" class="input-button" onclick="loadModel()">
+              Load Model
+            </button>
+            <button
+              id="demo-image-button"
+              class="input-button"
+              onclick="loadDemoImage()"
+            >
+             Use Demo Image
+            </button>
+            <label for="select-file-image" class="input-button">
+             Upload Image
+            </label>
+            <input
+              id="select-file-image"
+              type="file"
+              onchange="loadFile(event)"
+              style="display: none"
+            />
+            <div class="loading-overlay" id="loading-overlay" style="display: none;"></div>
+            <div
+              id="progress-box"
+              style="display: none;"
+            >
+              <div class="progress-content">
+                <img src="assets/loading.gif" id="demo-load" />
+                <span style="color: white;">Loading Skin Cancer Model...</span>
+              </div>
+            </div>
+          </div>
+          <div>
+            <button
+              id="predict-button"
+              class="input-button predict-button"
+              onclick="predButton()"
+            >
+              Detect
+            </button>
+          </div>
+        </div>
+        <div class="box-container">
+          <div class="demo-output">
+            <div class="out-box" id="select-file-box" style="display: none">
+              <img id="test-image" height="300px" width="450px" margin="2px" />
+            </div>
+            <div class="out-box" id="predict-box" style="display: none">
+              <p id="prediction"></p>
+              <br />
+              <p class="predictions-title">
+                <b>Top-3 Detections By Probability</b>
+              </p>
+              <ul id="predict-list"></ul>
+            </div>
+          </div>
+        </div>
+        <div class="chart-container">
+          <div class="chart-box">
+            <canvas id="predChart"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="footer-content">
+        <a href="https://github.com/arianrezaz/" target="_blank" class="footer-link">
+          <i class="fab fa-github fa-lg"></i>
+          GitHub
+        </a>
+      </div>
+    </footer>
+  </body>
+</html>
