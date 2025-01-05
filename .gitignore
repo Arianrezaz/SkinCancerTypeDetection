@@ -1,0 +1,15 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+.vscode
+
+/Skin-Lesion-Analyzer
+
+/sc_detector/data/raw
+
+/sc_detector/data/base_dir
+
+/sc_detector/artifacts/mn_model.h5
